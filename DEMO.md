@@ -22,6 +22,10 @@ Analyze Tesla stock
 
 ## Screenshot
 
+# 🔹 AI Stock Analysis
+
+![Tesla Analysis]("C:\Users\HP\Documents\Tesla_analysis.png")
+
 
 
 ---
