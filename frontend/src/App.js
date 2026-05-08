@@ -172,19 +172,30 @@ function App() {
 
           <h2>{chartItem.symbol} Stock Chart</h2>
 
-          <Line
-            data={{
-              labels: chartItem.data.labels,
-              datasets: [
-                {
-                  label: chartItem.symbol,
-                  data: chartItem.data.prices,
-                  borderColor: "#3b82f6",
-                  tension: 0.3,
-                },
-              ],
-            }}
-          />
+          <div style={{ height: "300px" }}>
+
+  <Line
+    data={{
+      labels: chartItem.data.labels,
+      datasets: [
+        {
+          label: chartItem.symbol,
+          data: chartItem.data.prices,
+          borderColor: "#3b82f6",
+          tension: 0.3,
+        },
+      ],
+    }}
+
+    options={{
+      responsive: true,
+      maintainAspectRatio: false,
+    }}
+  />
+
+</div>
+
+         
 
         </div>
 
