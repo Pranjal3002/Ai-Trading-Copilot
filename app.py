@@ -66,24 +66,26 @@ def ask_ollama(question):
         response = requests.post(
             "http://localhost:11434/api/generate",
             json={
-                "model": "llama3",
+                "model": "phi3",
                 "prompt": question,
                 "stream": False,
             },
+            timeout=180
         )
+
+        print("OLLAMA STATUS:", response.status_code)
 
         data = response.json()
 
-        return data.get(
-            "response",
-            "No response"
-        )
+        print("OLLAMA RESPONSE:", data)
+
+        return data.get("response", "No response")
 
     except Exception as e:
 
         print("OLLAMA ERROR:", e)
 
-        return "Error talking to AI"
+        return "AI model unavailable"
 
 
 # =========================
